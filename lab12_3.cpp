@@ -15,3 +15,16 @@ int main(){
 	
 	return 0;
 }
+int gcd(int x, int y) {
+    if (y == 0) {
+        return x;
+    } else {
+        return gcd(y, x % y);
+    }
+}
+
+void mySwap(int &a, int &b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
