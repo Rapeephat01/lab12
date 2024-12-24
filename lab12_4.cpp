@@ -1,6 +1,9 @@
 #include<iostream>
 
 using namespace std;
+int gcd(int x, int y);
+template <typename T>
+void mySwap(T &a, T &b);
 
 int main(){
 	int x, y;
@@ -29,4 +32,17 @@ int main(){
 
 	return 0;
 }
+int gcd(int x, int y) {
+    if (y == 0) {
+        return x;
+    } else {
+        return gcd(y, x % y);
+    }
+}
 
+template <typename T>
+void mySwap(T &a, T &b) {
+    T temp = a;
+    a = b;
+    b = temp;
+}
